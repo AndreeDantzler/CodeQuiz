@@ -20,7 +20,7 @@ var highScores = document.getElementById("highScores");
 var questions = [
   {
     question: "What does CSS stand for?",
-    choiceA: "Computer Science Studies",
+    choiceA: "Cascading Science Studies",
     choiceB: "Cascading Style Sheets",
     choiceC: "Cascade Style Sheets",
     correct: "B",
@@ -34,7 +34,7 @@ var questions = [
   },
   {
     question: "What is a string?",
-    choiceA: "Text written within quote",
+    choiceA: "Text within quote",
     choiceB: "Number",
     choiceC: "Boolean",
     correct: "A",
@@ -51,10 +51,11 @@ var timeInterval;
 // render time
 function renderTimer() {
   timeLeft = timeLeft - 1;
-  if (timeLeft = 0) {
+  counter.innerText = timeLeft;
+  if (timeLeft <= 0) {
     endQuiz();
   }
-  counter.innerText = timeLeft;
+  
 }
 
 // render a question and the different choices
